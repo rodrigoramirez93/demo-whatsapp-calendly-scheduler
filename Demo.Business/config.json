@@ -1,0 +1,561 @@
+{
+  "provider_id": 1,
+  "bot_name": "Turnito",
+  "description": "WhatsApp appointment scheduling bot",
+  "session_timeout_minutes": 10,
+  "language_id": 1,
+  "language": "Spanish",
+  "message_tags": [
+    {
+      "id": 1,
+      "name": "Initial"
+    },
+    {
+      "id": 2,
+      "name": "ProviderNotFound"
+    },
+    {
+      "id": 3,
+      "name": "ProviderFastTrack"
+    },
+    {
+      "id": 4,
+      "name": "ListButtonText"
+    },
+    {
+      "id": 5,
+      "name": "AppointmentNotFound"
+    },
+    {
+      "id": 6,
+      "name": "FormattedAppointments"
+    },
+    {
+      "id": 7,
+      "name": "ListBodyText"
+    },
+    {
+      "id": 8,
+      "name": "NoTimeSlotAvailable"
+    }
+  ],
+  "message_handlers": [
+    {
+      "id": -1,
+      "name": "ErrorHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.ErrorHandler, Turnito.Providers.Business",
+      "type": "error_handler"
+    },
+    {
+      "id": 1,
+      "name": "WelcomeHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.WelcomeHandler, Turnito.Providers.Business",
+      "category": "welcome"
+    },
+    {
+      "id": 2,
+      "name": "MenuLookupHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.Menu.MenuLookupHandler, Turnito.Providers.Business",
+      "category": "menu"
+    },
+    {
+      "id": 3,
+      "name": "MenuConfirmationHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.Menu.MenuConfirmationHandler, Turnito.Providers.Business",
+      "category": "menu"
+    },
+    {
+      "id": 4,
+      "name": "ProviderLookupHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.Provider.ProviderLookupHandler, Turnito.Providers.Business",
+      "category": "provider"
+    },
+    {
+      "id": 5,
+      "name": "ProviderMatchHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.Provider.ProviderMatchHandler, Turnito.Providers.Business",
+      "category": "provider"
+    },
+    {
+      "id": 6,
+      "name": "ProviderConfirmationHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.Provider.ProviderConfirmationHandler, Turnito.Providers.Business",
+      "category": "provider"
+    },
+    {
+      "id": 7,
+      "name": "ProviderServiceLookupHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.Provider.ProviderServiceLookupHandler, Turnito.Providers.Business",
+      "category": "provider"
+    },
+    {
+      "id": 8,
+      "name": "TimeSlotsWeekLookupHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.TimeSlots.TimeSlotsWeekLookupHandler, Turnito.Providers.Business",
+      "category": "timeslots"
+    },
+    {
+      "id": 9,
+      "name": "TimeSlotsDayLookupHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.TimeSlots.TimeSlotsDayLookupHandler, Turnito.Providers.Business",
+      "category": "timeslots"
+    },
+    {
+      "id": 10,
+      "name": "TimeSlotsTimeLookupHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.TimeSlots.TimeSlotsTimeLookupHandler, Turnito.Providers.Business",
+      "category": "timeslots"
+    },
+    {
+      "id": 11,
+      "name": "TimeSlotsTimeSelectorHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.TimeSlots.TimeSlotsTimeSelectorHandler, Turnito.Providers.Business",
+      "category": "timeslots"
+    },
+    {
+      "id": 12,
+      "name": "UserNameConfirmationHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.User.UserNameConfirmationHandler, Turnito.Providers.Business",
+      "category": "user"
+    },
+    {
+      "id": 13,
+      "name": "UserAppointmentConfirmationHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.User.UserAppointmentConfirmationHandler, Turnito.Providers.Business",
+      "category": "user"
+    },
+    {
+      "id": 14,
+      "name": "TimeSlotsViewHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.TimeSlots.TimeSlotsViewHandler, Turnito.Providers.Business",
+      "category": "timeslots"
+    },
+    {
+      "id": 15,
+      "name": "TimeSlotsCancelLookupHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.TimeSlots.TimeSlotsCancelLookupHandler, Turnito.Providers.Business",
+      "category": "timeslots"
+    },
+    {
+      "id": 16,
+      "name": "TimeSlotsCancelSelectorHandler",
+      "class_name": "Turnito.Providers.Business.Turnito.MessageHandlers.TimeSlots.TimeSlotsCancelSelectorHandler, Turnito.Providers.Business",
+      "category": "timeslots"
+    }
+  ],
+  "bot_features": [
+    {
+      "id": 1,
+      "name": "Agendar turno",
+      "description": "Permite a los usuarios programar una cita con un profesional",
+      "first_message_id": 4
+    },
+    {
+      "id": 2,
+      "name": "Ver mis turnos",
+      "description": "Permite a los usuarios ver los turnos agendados con anterioridad",
+      "first_message_id": 14
+    },
+    {
+      "id": 3,
+      "name": "Cancelar turno",
+      "description": "Permite a los usuarios cancelar una cita agendada con anterioridad",
+      "first_message_id": 15
+    }
+  ],
+  "messages": [
+    {
+      "id": -1,
+      "handler_id": -1,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 1,
+      "text": "Lo siento, hubo un error al procesar tu solicitud. Nuestro equipo ya está trabajando para resolverlo. Estaremos disponibles nuevamente en breve. ¡Gracias por tu paciencia!",
+      "type": "error",
+      "bot_features": []
+    },
+    {
+      "id": 1,
+      "handler_id": 1,
+      "successor_id": 2,
+      "predecessor_id": null,
+      "tag_id": 1,
+      "text": "¡Hola! Bienvenido a Turnito. 🎉 Este es un chat automatizado y estoy acá para ayudarte a sacar tu turno. En cualquier momento podés escribir \"atrás\" para volver un paso.\\n\\n\\n\\n⌛ Ojo: la sesión dura 30 minutos. Si te pasás de ese tiempo, vas a tener que empezar de nuevo y seguir los pasos otra vez.\\n\\n\\n\\n¿Arrancamos?",
+      "type": "welcome",
+      "bot_features": []
+    },
+    {
+      "id": 101,
+      "handler_id": 1,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 2,
+      "text": "No pude encontrar profesional con código: '{0}'. Por favor confirme el codigo con su profesional.",
+      "type": "error",
+      "bot_features": []
+    },
+    {
+      "id": 102,
+      "handler_id": 1,
+      "successor_id": 7,
+      "predecessor_id": null,
+      "tag_id": 3,
+      "text": "Detecté que queres sacar un turno con el *{0} {1} {2}*, con domicilio en {3} {4}, {5} ☺️.{6}Veamos su disponibilidad...",
+      "type": "confirmation",
+      "bot_features": []
+    },
+    {
+      "id": 2,
+      "handler_id": 2,
+      "successor_id": 3,
+      "predecessor_id": 2,
+      "tag_id": 1,
+      "text": "Por favor, selecciona una de las siguientes opciones del menú para que pueda asistirte:",
+      "type": "menu",
+      "bot_features": []
+    },
+    {
+      "id": 201,
+      "handler_id": 2,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 4,
+      "text": "Ver menú",
+      "type": "button",
+      "bot_features": []
+    },
+    {
+      "id": 3,
+      "handler_id": 3,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 1,
+      "text": "Seleccionaste {0}",
+      "type": "confirmation",
+      "bot_features": []
+    },
+    {
+      "id": 4,
+      "handler_id": 4,
+      "successor_id": 5,
+      "predecessor_id": 2,
+      "tag_id": 1,
+      "text": "Para poder asistirte con la búsqueda de un turno, por favor *ingresa el nombre del profesional* con el que deseas hacer la reserva, y me encargaré de localizarlo para ti.",
+      "type": "input_request",
+      "bot_features": [ 1 ]
+    },
+    {
+      "id": 5,
+      "handler_id": 5,
+      "successor_id": 6,
+      "predecessor_id": 2,
+      "tag_id": 1,
+      "text": "¡Genial! Encontré a estos profesionales. Por favor, selecciona el profesional con el que te gustaría continuar.",
+      "type": "selection",
+      "bot_features": [ 1 ]
+    },
+    {
+      "id": 501,
+      "handler_id": 5,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 4,
+      "text": "Ver profesionales",
+      "type": "button",
+      "bot_features": []
+    },
+    {
+      "id": 6,
+      "handler_id": 6,
+      "successor_id": 7,
+      "predecessor_id": 4,
+      "tag_id": 1,
+      "text": "Seleccionaste el profesional: {0}{1}",
+      "type": "confirmation",
+      "bot_features": [ 1 ]
+    },
+    {
+      "id": 7,
+      "handler_id": 7,
+      "successor_id": 8,
+      "predecessor_id": 4,
+      "tag_id": 1,
+      "text": "Por favor, selecciona el tipo de turno que deseas reservar, según el servicio que necesitas. Los tiempos y disponibilidad varían según el servicio elegido.",
+      "type": "selection",
+      "bot_features": [ 1 ]
+    },
+    {
+      "id": 701,
+      "handler_id": 7,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 4,
+      "text": "Ver tipo de turnos",
+      "type": "button",
+      "bot_features": []
+    },
+    {
+      "id": 8,
+      "handler_id": 8,
+      "successor_id": 9,
+      "predecessor_id": 7,
+      "tag_id": 1,
+      "text": "A continuación te comparto la disponibilidad de agendas del profesional *{0}* para las próximas semanas.\\n\\n\\n\\nPor favor, seleccioná la semana en la que prefieras agendar tu turno.\\n\\n\\n\\n",
+      "type": "selection",
+      "bot_features": [ 1 ]
+    },
+    {
+      "id": 801,
+      "handler_id": 8,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 4,
+      "text": "Ver semanas",
+      "type": "button",
+      "bot_features": []
+    },
+    {
+      "id": 802,
+      "handler_id": 8,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 8,
+      "text": "Lamentamos informarte que el profesional no tiene agenda disponible en las próximas semanas. Si lo deseas, podemos ayudarte a buscar otro profesional.",
+      "type": "error",
+      "bot_features": []
+    },
+    {
+      "id": 9,
+      "handler_id": 9,
+      "successor_id": 10,
+      "predecessor_id": 8,
+      "tag_id": 1,
+      "text": "Por favor, seleccioná el día en el que prefieras agendar tu turno.",
+      "type": "selection",
+      "bot_features": [ 1 ]
+    },
+    {
+      "id": 901,
+      "handler_id": 9,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 4,
+      "text": "Ver días",
+      "type": "button",
+      "bot_features": []
+    },
+    {
+      "id": 10,
+      "handler_id": 10,
+      "successor_id": 11,
+      "predecessor_id": 9,
+      "tag_id": 1,
+      "text": "Por favor, seleccioná el turno disponible que prefieras. Si existen mas posibilidades y lo deseás, podés seguir explorando opciones haciendo clic en 'Ver más'.",
+      "type": "selection",
+      "bot_features": [ 1 ]
+    },
+    {
+      "id": 1001,
+      "handler_id": 10,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 7,
+      "text": "Por favor, seleccione el turno de su conveniencia",
+      "type": "instruction",
+      "bot_features": []
+    },
+    {
+      "id": 1002,
+      "handler_id": 10,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 4,
+      "text": "Ver turnos",
+      "type": "button",
+      "bot_features": []
+    },
+    {
+      "id": 11,
+      "handler_id": 11,
+      "successor_id": 12,
+      "predecessor_id": 10,
+      "tag_id": 1,
+      "text": "Seleccionaste {0}",
+      "type": "confirmation",
+      "bot_features": []
+    },
+    {
+      "id": 12,
+      "handler_id": 12,
+      "successor_id": 13,
+      "predecessor_id": 11,
+      "tag_id": 1,
+      "text": "Para asegurar el turno, por favor selecciona el nombre y apellido de la persona que asistirá.",
+      "type": "input_request",
+      "bot_features": []
+    },
+    {
+      "id": 13,
+      "handler_id": 13,
+      "successor_id": 1,
+      "predecessor_id": 9,
+      "tag_id": 1,
+      "text": "> Tu turno está confirmado: \\n\\n\\n\\n{0}\\n\\n\\n\\n🎉 _Gracias por usar Turnito. ¡Estamos aquí para ayudarte!_ ",
+      "type": "final_confirmation",
+      "bot_features": []
+    },
+    {
+      "id": 1301,
+      "handler_id": 13,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 6,
+      "text": "👨‍💼 *Profesional*: {0}{1}💼 *Servicio*: {2}{3}📅 *Día*: {4}{5}🕒 *Horario*: {6}{7}⏳ *Duración*: {8} minutos{9}👤 *Persona*: {10}{11}📍 *Lugar*: {12}",
+      "type": "formatted_info",
+      "bot_features": []
+    },
+    {
+      "id": 14,
+      "handler_id": 14,
+      "successor_id": 1,
+      "predecessor_id": 2,
+      "tag_id": 1,
+      "text": "Estos son los turnos agendados por usted:",
+      "type": "list_header",
+      "bot_features": [ 2 ]
+    },
+    {
+      "id": 1401,
+      "handler_id": 14,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 5,
+      "text": "No tiene turnos agendados",
+      "type": "empty_state",
+      "bot_features": []
+    },
+    {
+      "id": 1402,
+      "handler_id": 14,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 6,
+      "text": "👨‍💼 *Profesional*: {0}{1}💼 *Servicio*: {2}{3}📅 *Día*: {4}{5}🕒 *Horario*: {6}{7}⏳ *Duración*: {8} minutos{9}👤 *Persona*: {10}{11}📍 *Lugar*: {12}",
+      "type": "formatted_info",
+      "bot_features": []
+    },
+    {
+      "id": 15,
+      "handler_id": 15,
+      "successor_id": 16,
+      "predecessor_id": 2,
+      "tag_id": 1,
+      "text": "Por favor, selecciona el turno que desees cancelar:",
+      "type": "selection",
+      "bot_features": [ 3 ]
+    },
+    {
+      "id": 1501,
+      "handler_id": 15,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 5,
+      "text": "No tiene turnos agendados",
+      "type": "empty_state",
+      "bot_features": []
+    },
+    {
+      "id": 1502,
+      "handler_id": 15,
+      "successor_id": null,
+      "predecessor_id": null,
+      "tag_id": 4,
+      "text": "Ver Turnos",
+      "type": "button",
+      "bot_features": []
+    },
+    {
+      "id": 16,
+      "handler_id": 16,
+      "successor_id": 1,
+      "predecessor_id": 15,
+      "tag_id": 1,
+      "text": "El turno con el profesional {0}, el día: {1} a las {2} fué cancelado.",
+      "type": "cancellation_confirmation",
+      "bot_features": []
+    }
+  ],
+  "conversation_flows": {
+    "main_menu": {
+      "entry_point": 2,
+      "options": [
+        {
+          "feature_id": 1,
+          "name": "Agendar turno",
+          "flow_start": 4
+        },
+        {
+          "feature_id": 2,
+          "name": "Ver mis turnos",
+          "flow_start": 14
+        },
+        {
+          "feature_id": 3,
+          "name": "Cancelar turno",
+          "flow_start": 15
+        }
+      ]
+    },
+    "appointment_booking": {
+      "flow_sequence": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+      "decision_points": [
+        {
+          "message_id": 5,
+          "type": "provider_selection"
+        },
+        {
+          "message_id": 7,
+          "type": "service_selection"
+        },
+        {
+          "message_id": 8,
+          "type": "week_selection"
+        },
+        {
+          "message_id": 9,
+          "type": "day_selection"
+        },
+        {
+          "message_id": 10,
+          "type": "time_selection"
+        },
+        {
+          "message_id": 12,
+          "type": "user_info_input"
+        }
+      ]
+    },
+    "view_appointments": {
+      "flow_sequence": [ 14 ],
+      "conditional_messages": [
+        {
+          "condition": "no_appointments",
+          "message_id": 1401
+        },
+        {
+          "condition": "has_appointments",
+          "message_id": 1402
+        }
+      ]
+    },
+    "cancel_appointment": {
+      "flow_sequence": [ 15, 16 ],
+      "conditional_messages": [
+        {
+          "condition": "no_appointments",
+          "message_id": 1501
+        }
+      ]
+    }
+  }
+}
